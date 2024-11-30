@@ -4,44 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./resources/css/style.css">
-    <!--<link href="./output.css" rel="stylesheet">-->
+    <link href="./output.css" rel="stylesheet">
     <title>Blog sobre las ODS</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
 
-
-    <header id="header">
-        <div id="titulo">
-            <h1>Blog sobre las ODS</h1>
+    <header class="header flex flex-row flex-wrap justify-center items-center min-h-screen">
+        <div class="titulo text-blue-950 text-6xl p-8">
+            <h1 class="text-center">Blog sobre las ODS</h1>
         </div>
-        <div id="imgPlaneta">
-            <figure> <img id="fotoPlaneta" src="resources/img/planeta.png" alt="planeta verde">
-            </figure>
+
+        <div class="imgPlaneta p-8">
+            <img class="fotoPlaneta h-auto w-[70vh]" src="resources/img/planeta.png" alt="planeta verde">
         </div>
     </header>
 
-
-    <section id="seccionInfo">
-        <div id="imgHoja">
-            <figure> <img id="fotoHoja" src="resources/img/hoja.png" alt="hoja verde">
-            </figure>
+    <section class="seccionInfo flex flex-row flex-wrap justify-center items-center min-h-screen">
+        <div class="imgHoja p-8">
+            <img class="fotoHoja w-[50vh]" src="resources/img/hoja.png" alt="hoja verde">
         </div>
-        <div id="tituloSeccInfo">
-            <div id="titInfo">
-                <h1>Sobre el blog</h1>
-            </div>
-
-
-            <div id="parrafoSobreBlog">
-                <h1>En este blog se habla sobre las actividades que realizamos en nuestra vida para contribuir a estar
-                    un paso más cerca de alcanzar los objetivos de desarrollo sustentable (ODS) y sobre diferente
-                    contenido multimedia que habla sobre la sustentabilidad y los ODS. </h1>
-            </div>
+        <div class="blogInfo flex flex-col justify-center items-center p-8">
+            <h1 class="text-4xl p-2">Sobre el blog</h1>
+            <p class="text-2xl break-words overflow-auto text-justify w-80">
+                En este blog se habla sobre las actividades que realizamos en nuestra vida para contribuir a estar
+                un paso más cerca de alcanzar los objetivos de desarrollo sustentable (ODS) y sobre diferente contenido
+                multimedia que habla sobre la sustentabilidad y los ODS.
+            </p>
         </div>
     </section>
+
 
     <section id="seccTituloCuadros">
         <h1>Blog</h1>
