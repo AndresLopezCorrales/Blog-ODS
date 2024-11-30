@@ -1,0 +1,252 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: ffffff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#articulos {
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+article {
+    line-height: 1.5;
+    text-align: center;
+    max-width: 100%;
+    /* Asegura que el párrafo no sobrepase el ancho del artículo */
+    max-height: 100%;
+    /* Asegura que el párrafo no sobrepase la altura del artículo */
+    overflow: auto;
+    /* Oculta el contenido que sobrepase los límites */
+    text-overflow: ellipsis;
+    /* Añade puntos suspensivos si el texto es muy largo */
+    word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2vh;
+    margin-bottom: 2vh;
+    width: 40vh;
+    height: 30vh;
+    background-color: #f7fdf3;
+    cursor: pointer;
+}
+
+#header {
+
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    animation: slideInDown;
+
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
+    height: 100vh;
+    width: auto;
+    /*background-color: blue;*/
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+}
+
+#titulo {
+    color: #347571;
+    font-size: 5vh;
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: green;*/
+
+}
+
+#imgPlaneta {
+    /*DIV*/
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: aqua;*/
+
+
+}
+
+#fotoPlaneta {
+    /*background-color: rebeccapurple;*/
+    width: 70vh;
+    height: auto;
+}
+
+#fotoHoja {
+    width: 50vh;
+    height: auto;
+}
+
+#imgHoja {
+    /*DIV*/
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    /*background-color: aqua;*/
+}
+
+#seccionInfo {
+    height: 100vh;
+    width: 100%;
+    /*background-color: turquoise;*/
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+}
+
+#tituloSeccInfo {
+    /*background-color: crimson;*/
+    font-size: 5vh;
+    /*margin-top: 10vh;*/
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+
+#parrafoSobreBlog {
+    font-size: small;
+    width: 60vh;
+    line-height: 1.5;
+    text-align: justify;
+    /*background-color: yellow;*/
+
+}
+
+#titInfo {
+    width: 100%;
+    color: #78bc40;
+    /*background-color: blueviolet;*/
+}
+
+#seccTituloCuadros,
+#seccTituloCreacionComposta {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-size: 5vh;
+    color: #4c826d;
+
+}
+
+#videoYt {
+    width: 1236px;
+    height: 695px;
+
+}
+
+.popup {
+    overflow: auto;
+    line-height: 1.5;
+    text-align: justify;
+    display: none;
+    /* Ocultar por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    /* Fondo semitransparente negro */
+    color: white;
+    text-align: center;
+    padding-top: 10%;
+    z-index: 1000;
+    max-height: 80vh;
+    /* Asegurarse de que esté encima de otros elementos */
+}
+
+
+
+/* Estilo para el botón de cerrar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/*Hacer responsive en otras pantallas*/
+
+
+@media (max-width: 756px) {
+
+    #header,
+    #seccionInfo {
+        flex-direction: column;
+        /* Cambia la dirección a columna para pantallas pequeñas */
+        height: auto;
+        /* Ajusta el alto para no ocupar 100vh */
+    }
+
+    #titulo,
+    #imgPlaneta,
+    #imgHoja,
+    #tituloSeccInfo,
+    #parrafoSobreBlog {
+        width: 100%;
+        /* Ambos ocupan el 100% del ancho en pantallas pequeñas */
+        height: auto;
+        /* Ajusta el alto para que se adapte al contenido */
+    }
+
+    #imgHoja {
+        justify-content: center;
+    }
+
+    #titInfo,
+    #parrafoSobreBlog {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #fotoPlaneta,
+    #fotoHoja {
+        width: 50vh;
+        /* Reduce el tamaño de la imagen en pantallas pequeñas */
+    }
+
+    .popup {
+        max-height: 100vh;
+    }
+
+    #videoYt {
+        width: auto;
+        height: auto;
+    }
+}
