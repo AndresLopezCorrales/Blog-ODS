@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -9,11 +9,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body>
+<body class="bg-slate-50">
 
-    <header class="header flex flex-row flex-wrap justify-center items-center min-h-screen">
-        <div class="titulo text-blue-950 text-6xl p-8">
-            <h1 class="text-center">Blog sobre las ODS</h1>
+    <nav class="border-gray-200 bg-verde-ods-oscuro">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+
+            <a href="#inicio" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="/src/resources/img/planeta.png" class="h-16" alt="Flowbite Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+                    title="Hecho por Andrés López Corrales">Blog ODS</span>
+            </a>
+
+            <button type="button"
+                class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-cta" aria-expanded="false"
+                onclick="document.getElementById('navbar-cta').classList.toggle('hidden')">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3 5h14a1 1 0 110 2H3a1 1 0 110-2zm0 4h14a1 1 0 110 2H3a1 1 0 110-2zm0 4h14a1 1 0 110 2H3a1 1 0 110-2z"
+                        clip-rule="evenodd"></path>
+                </svg>
+                <p>Menu</p>
+            </button>
+
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+                <ul
+                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-green-900 md:dark:bg-verde-ods-oscuro dark:border-green-950">
+                    <li>
+                        <a href="#inicio"
+                            class="block py-2 px-3 md:p-0 text-green-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-100 md:dark:hover:text-green-100 dark:text-white dark:hover:bg-verde-ods-oscuro dark:hover:text-white md:dark:hover:bg-transparent dark:border-green-950">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#infoBlog"
+                            class="block py-2 px-3 md:p-0 text-green-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-100 md:dark:hovertext-green-100 dark:text-white dark:hover:bg-verde-ods-oscuro dark:hover:text-white md:dark:hover:bg-transparent dark:border-green-950">Info</a>
+                    </li>
+                    <li>
+                        <a href="#blog"
+                            class="block py-2 px-3 md:p-0 text-green-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-100 md:dark:hovertext-green-100 dark:text-white dark:hover:bg-verde-ods-oscuro dark:hover:text-white md:dark:hover:bg-transparent dark:border-green-950">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#video"
+                            class="block py-2 px-3 md:p-0 text-green-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-100 md:dark:hovertext-green-100 dark:text-white dark:hover:bg-verde-ods-oscuro dark:hover:text-white md:dark:hover:bg-transparent dark:border-green-950">Video</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <header id="inicio" class="header flex flex-row flex-wrap justify-center items-center min-h-screen">
+        <div class="titulo text-7xl p-8">
+            <h1 class="text-center font-serif font-extrabold text-verde-ods-oscuro">Blog sobre las ODS</h1>
         </div>
 
         <div class="imgPlaneta p-8">
@@ -21,12 +68,12 @@
         </div>
     </header>
 
-    <section class="seccionInfo flex flex-row flex-wrap justify-center items-center min-h-screen">
+    <section id="infoBlog" class="seccionInfo flex flex-row flex-wrap justify-center items-center min-h-screen">
         <div class="imgHoja p-8">
             <img class="fotoHoja w-[50vh]" src="resources/img/hoja.png" alt="hoja verde">
         </div>
         <div class="blogInfo flex flex-col justify-center items-center p-8">
-            <h1 class="text-4xl p-2">Sobre el blog</h1>
+            <h1 class="text-5xl font-serif font-bold p-2 text-verde-ods-claro">Sobre el blog</h1>
             <p class="text-2xl break-words overflow-auto text-justify w-80">
                 En este blog se habla sobre las actividades que realizamos en nuestra vida para contribuir a estar
                 un paso más cerca de alcanzar los objetivos de desarrollo sustentable (ODS) y sobre diferente contenido
@@ -36,35 +83,45 @@
     </section>
 
 
-    <section id="seccTituloCuadros">
-        <h1>Blog</h1>
-    </section>
+    <div id="blog" class="flex flex-col justify-center items-center">
+        <div class="m-12 text-center text-pretty">
+            <h1 class="text-6xl text-center font-serif font-extrabold text-verde-ods-oscuro">Blog</h1>
+        </div>
+    </div>
 
-    <main id="articulos">
+    <main id="articulos" class="min-h-screen flex flex-row flex-wrap justify-center items-center">
 
         <!--Objetivos ODS-->
 
-        <article title="Energía asequible y no contaminante" data-imagen="null"
+        <article
+            class="w-56 h-48 m-4 flex justify-center items-center text-center bg-green-100 rounded-xl hover:bg-green-700 hover:text-white cursor-pointer"
+            title="Energía asequible y no contaminante" data-imagen="null"
             data-predeterminado="Apaga el televisor, la computadora y otros aparatos cuando te vayas de vacaciones."
             data-info="Mi familia y yo cada que nos vamos de viaje a cualquier parte en la que estaremos fuera de casa más de 1 día, desconectamos todos los aparatos eléctricos, desde la estufa hasta la televisión y la computadora. Esto siempre lo hemos hecho, uno, para que no ocurra una falla eléctrica cuando no estemos presentes, y 2, para evitar el consumo de energía. ">
             <p>
                 Energía asequible y no contaminante <b>(Andrés)</b>
             </p>
         </article>
-        <article title="Producción y consumo responsables" data-imagen="null"
+        <article
+            class="w-56 h-48 m-4 flex justify-center items-center text-center bg-green-100 rounded-xl hover:bg-green-700 hover:text-white cursor-pointer"
+            title="Producción y consumo responsables" data-imagen="null"
             data-predeterminado="Come productos locales. Ayuda a las asociaciones de comercio justo que promueven negocios comprometidos con los principios del comercio justo."
             data-info="Por donde yo vivo, existe una calle donde solo hay negocios locales, negocios de carnes, frutas, verduras, pescado y un montón de cosas más. Siempre que ocupamos algo en la casa o si se nos antoja algo de comer, yo soy el encargado de ir a la calle y conseguir los productos solicitados por mi familia. Siempre hemos comprado ahí, porque siempre ha sido más barato y nos gusta el producto que venden. Aparte, que así ayudamos al comercio local">
             <p>
                 Producción y consumo responsables <b>(Andrés)</b>
             </p>
         </article>
-        <article title="Vida Submarina" data-imagen="null"
+        <article
+            class="w-56 h-48 m-4 flex justify-center items-center text-center bg-green-100 rounded-xl hover:bg-green-700 hover:text-white cursor-pointer"
+            title="Vida Submarina" data-imagen="null"
             data-predeterminado="Practica actividades recreativas responsables, como pasear en barca, pesca, buceo y pingüinismo"
             data-info="Por el trabajo de mi padre, he tenido la oportunidad de viajar al mar y ayudar en la recolección de peces endémicos al Golfo de California. Esto se hace con el propósito de estudiarlos en cautiverio y, si se tiene la oportunidad, criar las diferentes especies de peces o fauna marina, para que lleguen a su maduración sexual y poder procrearse. Es una actividad que ayuda a entender mejor la fauna marina de nuestra región, y así poder ayudarla o limitar el daño que podemos hacerle a las varias especies que están en peligro o en riesgo.  
             Por otra parte, suelo realizar pesca deportiva en las áreas cercanas a Bahía de Kino. Los peces que atrapamos luego son consumidos por mi familia, y así podemos asegurarnos que nuestros alimentos son de una fuente mucho más sustentable que lo que se podría comprar en los supermercados o pescaderías comerciales.">
             <p>Vida Submarina <b>(Sebastian)</b></p>
         </article>
-        <article title="Salud y Bienestar" data-imagen="null"
+        <article
+            class="w-56 h-48 m-4 flex justify-center items-center text-center bg-green-100 rounded-xl hover:bg-green-700 hover:text-white cursor-pointer"
+            title="Salud y Bienestar" data-imagen="null"
             data-predeterminado="Nunca dejes de aprender. Participa en actividades profesionales o educativas aleja a las personas mayores de la depresión. Así que aprende otro idioma, lee mucho, organiza un club de lectura."
             data-info="Siempre intento realizar varias actividades, tanto físicas como educativas. En este año, me he propuesto realizar seis entrenamientos a la semana, con la esperanza de mantenerme en un buen estado de salud. Para llevar esto a cabo, he comprado varios equipos de gimnasio para tener en mi casa. Cuento con lo necesario para realizar entrenamiento con pesas y calistenia. Por otra parte, me inscribí en el programa de nado libre en el CUM (Centro de Usos Múltiples) del Estado. Desde muy jóven, he sido muy apasionado con la natación, y siento que es una actividad muy buena para el desarrollo físico. 
             Yendo más al lado educativo.
@@ -73,12 +130,16 @@
                 Salud y Bienestar <b>(Sebastian)</b>
             </p>
         </article>
-        <article title="Accion por el clima" data-imagen="null"
+        <article
+            class="w-56 h-48 m-4 flex justify-center items-center text-center bg-green-100 rounded-xl hover:bg-green-700 hover:text-white cursor-pointer"
+            title="Accion por el clima" data-imagen="null"
             data-predeterminado="Compra solo lo que necesites y haz las compras con bolsas reutilizables."
             data-info="Una de mis actividades favoritas de hacer rutinariamente es ir al supermercado con mi mamá, sin embargo, fue hace unos años, debido principalmente a la cuarentena, que las cosas que antes realizaba con cotidianidad tuvieron que cambiar. Ejemplo de ello fue el comenzar a hacer compras responsables, ya que en mi casa estábamos acostumbrados a adquirir más alimentos de los que era posible consumir. Teníamos la mentalidad de que era mejor comprar los productos de manera no tan consciente, dejándonos llevar por la accesibilidad, las ofertas y la oportunidad de ahorrarnos otro viaje al super, hoy en día esto ha cambiado. En mi hogar procuramos comprar solo lo primordial, productos locales y frescos que serán suficientes para consumir durante máximo dos semanas. Además, debido a los nuevos reglamentos, comenzamos a utilizar bolsas de tela reutilizables, intentamos llevar mínimo una bolsa grande siempre en el carro. A la vez, el comprar moderadamente apoya a que no usemos el transporte particular por mucho tiempo, reduciendo la emisión de humo.">
             <p>Accion por el clima <b>(Danna)</b></p>
         </article>
-        <article title="Vida de ecosistemas terrestres" data-imagen="null"
+        <article
+            class="w-56 h-48 m-4 flex justify-center items-center text-center bg-green-100 rounded-xl hover:bg-green-700 hover:text-white cursor-pointer"
+            title="Vida de ecosistemas terrestres" data-imagen="null"
             data-predeterminado="Recicla el papel y haz compras respetuosas con el medio ambiente." data-info="Desde que era más joven se me ha inculcado a cuidar de los materiales u objetos, un ejemplo son las hojas de papel. Considero que, a pesar de que están son accesibles no son un recurso que debería seguir siendo consumido de manera excesiva. Además de su propósito obvio (para realizar notas, impresiones, dibujos, etc.), las hojas de papel tienen  mayor uso creativo y práctico, con ellas es posible hacer otras manualidades, origamis, para embalaje, compostaje e incluso, las hojas ya usadas, pueden servir para crear hojas de papel reciclado.
 
         Para hacer hojas de papel reciclado, debes cortar papel usado en trozos pequeños y licuarlos junto con agua hasta obtener una pulpa homogénea. Luego se llena un recipiente grande con agua y se vierte la mezcla obtenida, usando una malla fina al fondo del recipiente para que la pulpa se asiente formando una capa uniforme. Después la malla se extrae y con una esponja se elimina el exceso de agua con unas cuantas presiones. La malla se coloca sobre una superficie plana para que se seque al aire y una vez seca, se retira la hoja de la malla y ya está listo para usar. 
@@ -90,7 +151,9 @@
 
         <!--Peli-->
 
-        <article title="Reseña Wall-E" data-imagen="null" data-predeterminado="" data-info="WALL-E es una película animada producida por Pixar y dirigida por Andrew Stanton. Su historia está ambientada en un futuro distópico, algo exagerado, en el que la Tierra es inhabitada por los seres humanos o cualquier otra forma de vida, esto debido a la acumulación masiva de basura y a la destrucción del medio ambiente. La historia nos muestra la vida de WALL-E o Waste Allocation Load Lifter: Earth-Class (se puede traducir literalmente a 
+        <article
+            class="w-56 h-48 m-4 flex justify-center items-center text-center bg-green-100 rounded-xl hover:bg-green-700 hover:text-white cursor-pointer"
+            title="Reseña Wall-E" data-imagen="null" data-predeterminado="" data-info="WALL-E es una película animada producida por Pixar y dirigida por Andrew Stanton. Su historia está ambientada en un futuro distópico, algo exagerado, en el que la Tierra es inhabitada por los seres humanos o cualquier otra forma de vida, esto debido a la acumulación masiva de basura y a la destrucción del medio ambiente. La historia nos muestra la vida de WALL-E o Waste Allocation Load Lifter: Earth-Class (se puede traducir literalmente a 
             Levantador de carga de asignación de residuos: clase terrestre), el cual es un pequeño robot abandonado en
             la Tierra con la tarea de limpiar el planeta para, supuestamente, permitir que los humanos puedan volver a
             ella una vez esta sea habitable. 
@@ -123,43 +186,59 @@
         </article>
 
 
-        <article title="Experiencia Pelicula Andrés" data-imagen="../resources/img/pelicula/inicio_peli.jpeg"
+        <article
+            class="w-56 h-48 m-4 flex justify-center items-center text-center bg-green-100 rounded-xl hover:bg-green-700 hover:text-white cursor-pointer"
+            title="Experiencia Pelicula Andrés" data-imagen="resources/img/pelicula/inicio_peli.jpeg"
             data-predeterminado=""
             data-info="Vimos a través de Discord la película de Wall E, prendimos la cámara y compartimos comentarios sobre la película. Ver la película con mis compañeros me gustó mucho, me divertí mucho con los comentarios durante la película y fue un tiempo agradable que volvería a repetir.">
             Experiencia Pelicula <b>(Andrés)</b></article>
 
-        <article title="Experiencia Pelicula Sebastian" data-imagen="../resources/img/pelicula/medio_peli.jpeg"
+        <article
+            class="w-56 h-48 m-4 flex justify-center items-center text-center bg-green-100 rounded-xl hover:bg-green-700 hover:text-white cursor-pointer"
+            title="Experiencia Pelicula Sebastian" data-imagen="resources/img/pelicula/medio_peli.jpeg"
             data-predeterminado=""
             data-info="Esta era una de mis películas favoritas de la infancia, pero al volver a verla, me pude dar cuenta de los mensajes “ocultos” que se querían transmitir. Al empezar la película, vemos una Tierra desolada y arruinada, un futuro posible para el planeta en nuestra propia realidad. Luego, vemos que la humanidad se vio forzada a abandonar el planeta y, por medio de pistas, podemos deducir que dejaron los robots en la Tierra para que puedan “limpiar” el planeta y una vez más hacerlo habitable. Creo que la gran ironía que la película nos quiere mostrar es que realmente no hubiera sido necesario abandonar la Tierra si tan sólo la hubieran cuidado antes de que se hubiera vuelto inservible a la vida humana. ">
             Experiencia
             Pelicula <b>(Sebastian)</b>
         </article>
 
-        <article title="Experiencia Pelicula Danna" data-imagen="../resources/img/pelicula/final_peli.jpeg"
+        <article
+            class="w-56 h-48 m-4 flex justify-center items-center text-center bg-green-100 rounded-xl hover:bg-green-700 hover:text-white cursor-pointer"
+            title="Experiencia Pelicula Danna" data-imagen="resources/img/pelicula/final_peli.jpeg"
             data-predeterminado="" data-info="Esta actividad me pareció divertida y un buen motivo para volver a ver esta película después de mucho tiempo. Cuando la película fue estrenada y la vi por primera vez, no me resultaba tan interesante, debido a la falta de diálogos y sobre todo a que el mensaje no era algo que yo pudiera reflexionar y comprender a esa edad. Sin embargo, me da mucho gusto haber tenido la oportunidad de verla nuevamente y ahora sí apreciar lo bonita que es la animación, y también para profundizar acerca de su moraleja final.
         ">Experiencia
             Pelicula <b>(Danna)</b></article>
 
         <!--Platica-->
 
-        <article title="Plática sobre creación de composta" data-imagen="null" data-predeterminado="" data-info="Para realizar esta dinámica consideramos varios lugares y comunidades en los cuales llevar a cabo la plática, después de discutirlo, y debido a la disponibilidad, nos decidimos por hacer nuestra presentación dentro de la universidad. Pedimos permiso a la profesora Tatliana Mercedes Icedo Zamora, quien previamente nos había impartido clases, para compartir nuestra plática durante unos minutos en una de sus sesiones. El grupo al que nos dirigimos pertenecía a la carrera de Mecatrónica, y los estudiantes eran de diferentes semestres.
+        <article
+            class="w-56 h-48 m-4 flex justify-center items-center text-center bg-green-100 rounded-xl hover:bg-green-700 hover:text-white cursor-pointer"
+            title="Plática sobre creación de composta" data-imagen="null" data-predeterminado="" data-info="Para realizar esta dinámica consideramos varios lugares y comunidades en los cuales llevar a cabo la plática, después de discutirlo, y debido a la disponibilidad, nos decidimos por hacer nuestra presentación dentro de la universidad. Pedimos permiso a la profesora Tatliana Mercedes Icedo Zamora, quien previamente nos había impartido clases, para compartir nuestra plática durante unos minutos en una de sus sesiones. El grupo al que nos dirigimos pertenecía a la carrera de Mecatrónica, y los estudiantes eran de diferentes semestres.
 
         Optamos por  las ODS 12 y 13 (Producción, Consumo Responsable y Acción por el Clima) como tema respecto el cual brindar información, específicamente hablamos sobre cómo realizar, en qué consiste y la importancia de la composta para reducir el impacto ambiental. Dos de nosotros presentamos una infografía con los pasos básicos para realizar una composta en casa, mientras otro compañero mostró cómo implementar dicha información.
         "><b>Plática sobre creación de composta</b></article>
-        <article title="Infografía creación de composta" data-imagen="../resources/img/platica/Infografia_composta.png"
+        <article
+            class="w-56 h-48 m-4 flex justify-center items-center text-center bg-green-100 rounded-xl hover:bg-green-700 hover:text-white cursor-pointer"
+            title="Infografía creación de composta" data-imagen="resources/img/platica/Infografia_composta.png"
             data-predeterminado="" data-info="Dar click en el titulo del recuadro para ver infografía"><a
                 href="https://www.canva.com/design/DAGR1SNaSwI/HAhPPdsIyXnlA2FwEKXVEw/edit?utm_content=DAGR1SNaSwI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton ">Infografia
                 creación de composta</a>
         </article>
-        <article title="Experiencia plática Andrés" data-imagen="null" data-predeterminado=""
+        <article
+            class="w-56 h-48 m-4 flex justify-center items-center text-center bg-green-100 rounded-xl hover:bg-green-700 hover:text-white cursor-pointer"
+            title="Experiencia plática Andrés" data-imagen="null" data-predeterminado=""
             data-info="Dar la plática fue una experiencia muy divertida, los oyentes fueron muy agradables y cooperativos al momento de presentarles la presentación sobre la creación de la composta. En mi parte, que yo fuí el que enseño como hacer una composta, cuando les dije a los oyentes que se levantaran para poder ver el proceso de creación de cerca, fueron comprensivos y buena onda, porque sí hubo mucha gente que se paró y se involucró en la plática. Ese gesto, y en general, toda la plática fue toda una muy bonita experiencia. Ver el video sobre como crear una composta.">
             Experiencia
             plática <b>(Andrés)</b> </article>
-        <article title="Experiencia plática Sebastian" data-imagen="../resources/img/platica/platica_sebas.jpeg"
+        <article
+            class="w-56 h-48 m-4 flex justify-center items-center text-center bg-green-100 rounded-xl hover:bg-green-700 hover:text-white cursor-pointer"
+            title="Experiencia plática Sebastian" data-imagen="resources/img/platica/platica_sebas.jpeg"
             data-predeterminado=""
             data-info="Los estudiantes presentes en la plática fueron muy simpáticos. Nos preguntaron cosas y se notó un interés genuino en lo que veníamos a mostrarles. De igual manera, la maestra Tatiana fue muy linda. Les expliqué acerca del proceso de la descomposición de la materia y parece ser que les gustó mucho el tema a los alumnos.">
             Experiencia plática <b>(Sebastian)</b></article>
-        <article title="Experiencia plática Danna" data-imagen="../resources/img/platica/platica_danna.jpeg"
+        <article
+            class="w-56 h-48 m-4 flex justify-center items-center text-center bg-green-100 rounded-xl hover:bg-green-700 hover:text-white cursor-pointer"
+            title="Experiencia plática Danna" data-imagen="resources/img/platica/platica_danna.jpeg"
             data-predeterminado=""
             data-info="Me gusto realizar la infografía y la presentación acerca de este tema. La profesora fue muy amable al prestarnos tiempo de su hora para realizar nuestra plática y la audiencia fue respetuosa y atenta a la información que quisimos aportar. ">
             Experiencia plática <b>(Danna)</b></article>
@@ -167,20 +246,25 @@
 
     </main>
 
-    <section id="seccTituloCreacionComposta">
-        <h1>Video - Crear una composta</h1>
+    <section id="video" class="seccTituloCreacionComposta flex flex-col justify-center items-center">
+        <div class="flex flex-col justify-center items-center">
+            <div class="m-12 text-center text-pretty">
+                <h1 class="text-6xl text-center font-serif font-extrabold text-verde-ods-oscuro">Video - Crear Composta
+                </h1>
+            </div>
+        </div>
         <iframe id="videoYt" src="https://www.youtube.com/embed/UEbv07Ckg1I"
             title="Demostración de cómo realizar una composta" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+            referrerpolicy="strict-origin-when-cross-origin" class="min-h-screen w-[80%] m-10" allowfullscreen>
+        </iframe>
     </section>
 
-
-
-    <div id="mi-popup" class="popup">
-        <button class="close-btn" id="close-btn">Cerrar</button>
-        <p id="textoMostrar"> </p>
+    <div id="mi-popup"
+        class="popup overflow-auto text-justify hidden fixed top-0 left-0 w-[100%] h-[100%] bg-black-trans">
+        <button class="close-btn absolute top-2.5 right-2.5 bg-red-600 text-white p-2.5 cursor-pointer"
+            id="close-btn">Cerrar</button>
+        <div id="textoMostrar" class="bg-slate-950"> </div>
 
     </div>
 
