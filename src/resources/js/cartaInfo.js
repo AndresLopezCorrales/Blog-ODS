@@ -37,12 +37,18 @@ articulo.addEventListener('click', function (event) {
         const resultado = document.getElementById('textoMostrar');
 
         if (dataImagen === 'null') {
-            resultado.innerHTML = `<h1> ${titleValue} </h1> <br> ${dataPredeterminado} <br><br> ${dataInfoBueno} <br> <br>`;
+            resultado.innerHTML = `<h1 class="p-12 text-center justify-center text-5xl text-white"> ${titleValue} </h1> 
+                                    <h2 class="p-6 text-center justify-center text-2xl text-white">${dataPredeterminado}</h2> <br> 
+                                    <h3 class="p-6 mx-8 text-justify justify-center text-xl text-white">${dataInfoBueno}</h3>`;
         }
 
         else {
-            resultado.innerHTML = `<h1> ${titleValue} </h1> <br> ${dataPredeterminado} <br><br> ${dataInfoBueno} <br> <br>
-        <img src="${dataImagen}" alt="" style= "width: 25rem; height: 15rem;">`;
+            resultado.innerHTML = `<h1 class="p-12 text-center justify-center text-5xl text-white"> ${titleValue} </h1> 
+                                    <h2 class="p-6 text-center justify-center text-2xl text-white">${dataPredeterminado}</h2> <br> 
+                                    <h3 class="p-6 mx-8 text-justify justify-center text-xl text-white">${dataInfoBueno}</h3>;<br>
+                                    <div class="flex flex-col items-center justify-center">
+                                    <img src="${dataImagen}" alt="" class="w-80 h-44 mb-6">
+                                    </div>`;
         }
 
 
